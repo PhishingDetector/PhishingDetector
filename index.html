@@ -36,11 +36,11 @@
                     <p>
                         Phishing Detector is a project of the LMU Munich in
                         cooperation with the Bundeswehr University, which was
-                        developed in the context of a master thesis. The aim is
-                        to test whether the spatial proximity of warnings has an
-                        influence on user behavior, and whether there are
+                        developed in the context of a master's thesis. Its aim
+                        is to test whether the spatial proximity of warnings
+                        influences user behavior and whether there are
                         properties that improve or worsen this behavior. The
-                        master thesis is written by Florian Hartl, the
+                        master's thesis is written by Florian Hartl, the
                         supervisors are M.Sc. Felix Dietz and Dr. Pascal
                         Knierim. The thesis will be titled "Development and
                         Evaluation of a Browser Plugin To Prevent Social
@@ -62,9 +62,9 @@
                     <div class="Headline">How does it work?</div>
                     <div class="infoText">
                         PhishingDetector scans the domain of every page you
-                        visit. Then it matches whether the domain is in a white-
-                        or blacklist of websites that we obtain from Mendeley.
-                        The origin of the files is a
+                        visit. Then it matches whether the domain is in an
+                        allow- or blocklist of websites we obtained from
+                        Mendeley. The origin of the files is a
                         <a
                             href="https://data.mendeley.com/datasets/n96ncsr5g4/1"
                             target="_blank"
@@ -76,7 +76,7 @@
                         >
                         for the domain. This site scans websites with about 80
                         virus scanners and returns the result. If more than one
-                        scan finds the domain to be malicious, we create a
+                        scan finds the website to be malicious, we create a
                         warning. You can then decide for yourself in the pop-up
                         window whether you trust the scan or classify the site
                         as safe.
@@ -99,23 +99,6 @@
                         Click on the questions to expand the frame and see the
                         answer
                     </p>
-                    <details class="question">
-                        <summary class="q">
-                            I am part of the Prolific study, but entered my
-                            Prolific ID incorrectly. What can I do?
-                        </summary>
-                        <p class="a">
-                            When entering the ProlificID, make sure to enter all
-                            characters without errors so that we can assign the
-                            contributions to your account. If you mistyped the
-                            Prolific ID, please
-                            <a href="mailto:florian.hartl@campus.lmu.de"
-                                >write us an email</a
-                            >
-                            with the displayed ID in the popup AND your Prolific
-                            ID.
-                        </p>
-                    </details>
                     <details class="question">
                         <summary class="q">
                             What data is shared with the developers?
@@ -144,37 +127,21 @@
                     </details>
                     <details class="question">
                         <summary class="q">
-                            Do I have to leave all options enabled for the
-                            study?
-                        </summary>
-                        <p class="a">
-                            For the study, the general functionality and the
-                            upload of data must be enabled. Background coloring
-                            can be enabled or disabled as desired. NOTE: In very
-                            rare cases (for example for a few computers that are
-                            administrated by your company) it can occur that the
-                            options reenable themselves. In that case please use
-                            Inkognito tabs when you don't want the plugin to
-                            work.
-                        </p>
-                    </details>
-                    <details class="question">
-                        <summary class="q">
                             Why does the yellow icon appear some times and turns
                             green after some time?
                         </summary>
                         <p class="a">
                             The yellow icon shows you, that we are not finished
-                            retrieving all the needed information. If a web page
-                            is not known by your browser's version of
+                            retrieving all the needed information. If your
+                            instance of the plugin does not know a web page of
                             PhishingDetector, a virus scan is requested. If the
                             page was never scanned before, we request a scan by
-                            Virustotal which initiates a scan by multiple
-                            detectors. After this scan the result is returned to
-                            the plugin. Until all this is processed, the icon's
-                            color will be yellow. You can retrieve information
-                            about the current status that will be updated once
-                            the scan results are ready.
+                            Virustotal, which initiates a scan by multiple
+                            detectors. After this scan, the result is returned
+                            to the plugin. Until all this is processed, the
+                            icon's color will be yellow. You can retrieve
+                            information about the current status that will be
+                            updated once the scan results are ready.
                         </p>
                     </details>
                     <details class="question">
@@ -182,15 +149,17 @@
                             Why does the scan not work on some pages?
                         </summary>
                         <p class="a">
-                            On most public accessible pages the scan and the
+                            On most public accessible pages, the scan and the
                             display of the icon should work without any
                             problems. Login pages that are dynamically produced
                             will not work with the inserted icon. On system
                             pages and files that are open locally, no analysis
-                            is performed and the icon remains yellow. If the
-                            volume of requests is too high, it may be that
-                            temporarily no new analyses can be retrieved. This
-                            error will fix itself after 24 hours at the latest.
+                            is performed and the icon remains yellow. If you
+                            request too many scans per time, your API access
+                            gets temporarily reduced, and no new analyses can be
+                            retrieved (You can access 4 scans per minute and a
+                            maximum of 500 scans per day). This error will fix
+                            itself after 24 hours at the latest.
                         </p>
                     </details>
                     <details class="question">
@@ -205,6 +174,7 @@
                         <ul>
                             <li>The page is not fully loaded yet</li>
                             <li>The plugin is disabled</li>
+                            <li>The page is created within your local network</li>
                             <li>
                                 The page was not opened with the plugin enabled
                             </li>
